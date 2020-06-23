@@ -10,6 +10,9 @@
 :standard-fail-text: Verify that you followed all the steps. If you continue to have issues, contact your administrator.
 :bl: pass:[ +]
 
+// Include doc attributes
+include::attributes.adoc
+
 //[id='1-how-to-assemble-a-solution-pattern']
 //= {title}
 

@@ -1,0 +1,114 @@
+// Standard document attributes to be used in the documentation
+//
+// The following are shared by all documents
+:toc:
+:toclevels: 4
+:numbered:
+
+:datavirt: Data Virtualization
+
+:fuse: Fuse
+
+:fuseonline: Fuse Online
+
+:infin: ∞
+
+:prodname: Integration
+
+:prodnamefull: Red Hat Integration
+
+:productpkg: red_hat_integration
+
+:productdocsemail: fuse-docs-support@redhat.com
+
+:registry: Service Registry
+
+:reg: ®
+
+:reldate: July 2020
+
+:router: Apache Camel
+
+:trade: ™
+
+:version: 2020-Q2
+
+:3scale-version: 2.8
+
+:fuse-version: 7.6
+
+:syndesis-version: 1.9
+
+:syndesis-quickstart-url: https://github.com/syndesisio/syndesis-quickstarts/tree/{syndesis-version}
+
+:amq-version: 7.6
+
+:cdk-version: 3.10
+
+:DevStudioVersion: 12.11
+
+// Change Data Capture / Debezium attribute settings
+//
+:ProductLongName: Red Hat Debezium
+:ProductName: Debezium
+:ProductVersion: 1.1
+:BaseProductLongName: Red Hat AMQ
+:BaseProductName: AMQ
+:BaseProductVersion: 7.6
+:BaseProductMajorVersion: 7
+:mysql-version: 8.0
+:partialsdir: ../..
+:DebeziumDownload: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=red.hat.integration&downloadType=distributions[Red Hat Integration download site]
+
+
+// streams
+
+:AMQVersion: 7.6
+:StreamsName: {BaseProductName} Streams
+:StreamsVersion: 1.4
+:KafkaConnectApiVersion: kafka.strimzi.io/v1beta1
+:DockerRepository: https://access.redhat.com/containers/#/product/RedHatAmq[Red Hat Container Catalog^]
+:DockerImageUser: 1001
+:DockerKafkaConnect: registry.redhat.io/amq7/amq-streams-kafka-24:1.4.0
+:DockerKafkaConnectS2I: registry.redhat.io/amq7/amq-streams-kafka-24:1.4.0
+:ContainerCatalogImgPrefix: registry.redhat.io
+:DockerOrg: registry.redhat.io/amq7
+:DockerTag: 23
+:ZipDownload: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jboss.amq.streams[AMQ Streams download site^]
+
+:debezium-version: 1.0.3.Final
+:debezium-dev-version: 1.0
+:debezium-kafka-version: 2.3.0
+:debezium-docker-label: 1.0
+:install-version: 1.0
+:confluent-platform-version: 5.1.2
+:strimzi-version: 0.13.0
+
+
+// Service Registry settings
+:registry-name-full: {prodnamefull} - Service Registry
+:registry-version: 1.0
+:download-url-registry-container-catalog: https://catalog.redhat.com/software/containers/search
+:download-url-registry-maven: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+:download-url-registry-maven-full: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+:download-url-registry-source-code: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2 
+:download-url-registry-kafka-connect: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+
+
+
+// Camel K settings
+:CamelKName: {prodnamefull} - Camel K
+:CamelKOCPVersion: 4.3
+:CamelKServerlessVersion: 1.7
+:DownloadURLCamelKOperator: https://catalog.redhat.com/software/containers/detail/5e9d5f795a134668769d542d?container-tabs=gti
+:DownloadURLCamelKMavenRepo: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=82561&product=red.hat.integration&version=2020-Q2&downloadType=distributions
+:DownloadURLCamelKSourceCode: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=82531&product=red.hat.integration&version=2020-Q2&downloadType=distributions
+
+
+// Apache Camel Kafka Connector
+:CamelKCName: Camel K Kafka Connector
+:CKCStreamsVersion: 1.4
+
+
+// Include attributes for deep linking
+include::attributes-links.adoc[]
