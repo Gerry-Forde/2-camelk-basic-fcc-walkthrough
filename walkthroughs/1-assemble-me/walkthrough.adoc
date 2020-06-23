@@ -10,6 +10,302 @@
 :standard-fail-text: Verify that you followed all the steps. If you continue to have issues, contact your administrator.
 :bl: pass:[ +]
 
+// Include doc attributes
+// Standard document attributes to be used in the documentation
+//
+// The following are shared by all documents
+:toc:
+:toclevels: 4
+:numbered:
+
+:datavirt: Data Virtualization
+
+:fuse: Fuse
+
+:fuseonline: Fuse Online
+
+:infin: ∞
+
+:prodname: Integration
+
+:prodnamefull: Red Hat Integration
+
+:productpkg: red_hat_integration
+
+:productdocsemail: fuse-docs-support@redhat.com
+
+:registry: Service Registry
+
+:reg: ®
+
+:reldate: July 2020
+
+:router: Apache Camel
+
+:trade: ™
+
+:version: 2020-Q2
+
+:3scale-version: 2.8
+
+:fuse-version: 7.6
+
+:syndesis-version: 1.9
+
+:syndesis-quickstart-url: https://github.com/syndesisio/syndesis-quickstarts/tree/{syndesis-version}
+
+:amq-version: 7.6
+
+:cdk-version: 3.10
+
+:DevStudioVersion: 12.11
+
+// Change Data Capture / Debezium attribute settings
+//
+:ProductLongName: Red Hat Debezium
+:ProductName: Debezium
+:ProductVersion: 1.1
+:BaseProductLongName: Red Hat AMQ
+:BaseProductName: AMQ
+:BaseProductVersion: 7.6
+:BaseProductMajorVersion: 7
+:mysql-version: 8.0
+:partialsdir: ../..
+:DebeziumDownload: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=red.hat.integration&downloadType=distributions[Red Hat Integration download site]
+
+
+// streams
+
+:AMQVersion: 7.6
+:StreamsName: {BaseProductName} Streams
+:StreamsVersion: 1.4
+:KafkaConnectApiVersion: kafka.strimzi.io/v1beta1
+:DockerRepository: https://access.redhat.com/containers/#/product/RedHatAmq[Red Hat Container Catalog^]
+:DockerImageUser: 1001
+:DockerKafkaConnect: registry.redhat.io/amq7/amq-streams-kafka-24:1.4.0
+:DockerKafkaConnectS2I: registry.redhat.io/amq7/amq-streams-kafka-24:1.4.0
+:ContainerCatalogImgPrefix: registry.redhat.io
+:DockerOrg: registry.redhat.io/amq7
+:DockerTag: 23
+:ZipDownload: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jboss.amq.streams[AMQ Streams download site^]
+
+:debezium-version: 1.0.3.Final
+:debezium-dev-version: 1.0
+:debezium-kafka-version: 2.3.0
+:debezium-docker-label: 1.0
+:install-version: 1.0
+:confluent-platform-version: 5.1.2
+:strimzi-version: 0.13.0
+
+
+// Service Registry settings
+:registry-name-full: {prodnamefull} - Service Registry
+:registry-version: 1.0
+:download-url-registry-container-catalog: https://catalog.redhat.com/software/containers/search
+:download-url-registry-maven: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+:download-url-registry-maven-full: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+:download-url-registry-source-code: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+:download-url-registry-kafka-connect: https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=red.hat.integration&version=2020-Q2
+
+
+
+// Camel K settings
+:CamelKName: {prodnamefull} - Camel K
+:CamelKOCPVersion: 4.3
+:CamelKServerlessVersion: 1.7
+:DownloadURLCamelKOperator: https://catalog.redhat.com/software/containers/detail/5e9d5f795a134668769d542d?container-tabs=gti
+:DownloadURLCamelKMavenRepo: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=82561&product=red.hat.integration&version=2020-Q2&downloadType=distributions
+:DownloadURLCamelKSourceCode: https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=82531&product=red.hat.integration&version=2020-Q2&downloadType=distributions
+
+
+// Apache Camel Kafka Connector
+:CamelKCName: Camel K Kafka Connector
+:CKCStreamsVersion: 1.4
+
+
+// Include attributes for deep linking
+// JBoss Fuse titles
+:LinkCXFDevGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_cxf_development_guide/index
+:NameOfCXFDevGuide: Apache CXF Development Guide
+
+:LinkCXFSecurityGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_cxf_security_guide/index
+:NameOfCXFSecurityGuide: Apache CXF Security Guide
+
+:LinkKarafConsoleRef: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_karaf_console_reference/index
+:NameOfKarafConsoleRef: Apache Karaf Console Reference
+
+:LinkDeployKaraf: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/deploying_into_apache_karaf/index
+:NameOfDeployKaraf: Deploying into Apache Karaf
+
+:LinkDeployEAP: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/deploying_into_jboss_eap/index
+:NameOfDeployEAP: Deploying into JBoss EAP
+
+:LinkDeploySpringBoot: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/deploying_into_spring_boot/index
+:NameOfDeploySpringBoot: Deploying into Spring Bootxref
+
+:LinkKarafInstallGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/installing_on_apache_karaf/index
+:NameOfKarafInstallGuide: Installing on Apache Karaf
+
+:LinkEAPInstallGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/installing_on_jboss_eap/index
+:NameOfEAPInstallGuide: Installing on JBoss EAP
+
+:LinkMigrationGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/migration_guide/index
+:NameOfMigrationGuide: Migration Guide
+
+:LinkManagingFuse: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/managing_fuse/index
+:NameOfManagingFuse: Managing Fuse
+
+:LinkReleaseNotes: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/release_notes/index
+:NameOfReleaseNotes: Release Notes
+
+:LinkSecurityGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_karaf_security_guide/index
+:NameOfSecurityGuide: Apache Karaf Security Guide
+
+:LinkTransactionsGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_karaf_transaction_guide/index
+:NameOfTransactionsGuide: Apache Karaf Transaction Guide
+
+:LinkToolingTutorials: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/tooling_tutorials/index
+:NameOfToolingTutorials: Tooling Tutorials
+
+:LinkToolingUserGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/tooling_user_guide/index
+:NameOfToolingUserGuide: Tooling User Guide
+
+:LinkCamelCompRef: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_camel_component_reference/index
+:NameOfCamelCompRef: Apache Camel Component Reference
+
+:LinkCamelDevGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/apache_camel_development_guide/index
+:NameOfCamelDevGuide: Apache Camel Development Guide
+
+:LinkFISGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/fuse_on_openshift_guide/
+:NameOfFISGuide: Fuse on OpenShift Guide
+
+// Fuse Online titles
+
+:LinkSyndesisTutorials: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/fuse_online_sample_integration_tutorials/
+:NameOfSyndesisTutorials: Fuse Online Sample Integration Tutorials
+
+:LinkSyndesisIntegrationGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/integrating_applications_with_fuse_online/
+:NameOfSyndesisIntegrationGuide: Integrating Applications with Fuse Online
+
+:LinkSyndesisConnectorGuide: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/connecting_fuse_online_to_applications_and_services/
+:NameOfSyndesisConnectorGuide: Connecting Fuse Online to Applications and Services
+
+:LinkFuseOnlineOnOCP: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/html-single/installing_and_operating_fuse_online_on_openshift_container_platform/
+:NameOfFuseOnlineOnOCPGuide: Installing and Operating Fuse Online on OpenShift Container Platform
+
+//REVISIT Don't forget to add the guides from the tooling repo, FIS guide!
+
+// Developer Studio titles
+:DevStudioProdName: Red Hat CodeReady Studio
+:DevStudioProdNameShort: CodeReady Studio
+:DevStudioVersion: 12.11
+
+:LinkDevStudioInstallGuide: https://access.redhat.com/documentation/en-us/red_hat_codeready_studio/{DevStudioVersion}/html-single/installation_guide/
+:NameOfDevStudioInstallGuide: Installation Guide
+
+:LinkDevStudioRelNotes: https://access.redhat.com/documentation/en-us/red_hat_codeready_studio/{DevStudioVersion}/html-single/release_notes_and_known_issues/
+:NameOfDevStudioRelNotes: Release Notes and Known Issues
+
+
+// Container Development Kit (CDK) titles
+:CDKProdName: Red Hat Container Development Kit
+:CDKProdNameShort: Container Development Kit
+
+:LinkCDKGettingStarted: https://access.redhat.com/documentation/en-us/red_hat_container_development_kit/{cdk-version}/html-single/getting_started_guide/
+:NameOfCDKGettingStarted: Getting Started Guide
+
+// Red Hat Single Sign-On titles
+:RHSSOProdName: Red Hat Single Sign-On
+:RHSSOProdNameShort: Single Sign-On
+:NameOfRHSSOOpenShift: Red Hat Single Sign-On for OpenShift
+:RHSSOVersion: 7.3
+:LinkRHSSOOpenShift: https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{RHSSOVersion}/html/red_hat_single_sign-on_for_openshift/index
+:NameOfRHSSOServerAdmin: Server Administration Guide
+:LinkRHSSOServerAdmin: https://access.redhat.com/documentation/en-us/red_hat_single_sign-on/{RHSSOVersion}/html-single/server_administration_guide/index
+
+// Red Hat 3scale API Management titles
+:3scaleProdName: Red Hat 3scale API Management
+:3scaleProdNameShort: 3scale
+:3scaleVersion: 2.7
+
+:Link3scaleServiceDiscovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{3scaleVersion}/html-single/admin_portal_guide/service_discovery
+:NameOf3scaleServiceDiscovery: Service Discovery
+:Link3scaleDevPortal: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{3scaleVersion}/html-single/using_the_developer_portal/
+:NameOf3scaleDevPortal: Using the Developer Portal
+:NameOf3ScaleInstalling: Installing 3scale
+:Link3scaleInstalling: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{3scaleVersion}/html-single/installing_3scale/index
+
+//Red Hat Integration titles
+
+:LinkIntegrationRelNotes: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/release_notes/
+:NameIntegrationRelNotes: Release Notes
+
+:LinkIntegrationGetStart: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/getting_started_with_apis_in_red_hat_integration/
+:NameIntegrationGetStart: Getting Started with APIs in Red Hat Integration
+
+:LinkIntegrationDevDeploy: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/developing_and_deploying_api_provider_integrations/
+:NameIntegrationDevDeploy: Developing and Deploying API Provider Integrations
+
+:LinkIntegrationMonitor: https://access.redhat.com/documentation/en-us/red_hat_integration{version}/html-single/prometheus/
+:NameIntegrationMonitor: Monitoring Red Hat Integration
+
+:LinkIntegrationData: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/data_integration/
+:NameIntegrationData: Data Integration
+
+// AMQ Streams titles
+
+:LinkStreamsOpenShift: https://access.redhat.com/documentation/en-us/red_hat_amq/{AMQVersion}/html-single/using_amq_streams_on_openshift/index
+:NameStreamsOpenShift: Using AMQ Streams on OpenShift
+
+:LinkStreamsRhel: https://access.redhat.com/documentation/en-us/red_hat_amq/{AMQVersion}/html-single/using_amq_streams_on_rhel/index
+:NameStreamsRhel: Using AMQ Streams on RHEL
+
+// Change Data Capture titles
+
+:LinkCDCInstallOpenShift: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/installing_change_data_capture_on_openshift/
+:NameCDCInstallOpenShift: Installing {ProductName} on OpenShift
+
+:LinkCDCInstallRHEL: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/installing_change_data_capture_on_rhel/
+:NameCDCInstallRHEL: Installing {ProductName} on RHEL
+
+:LinkCDCGettingStarted: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/getting_started_with_change_data_capture/index
+:NameCDCGettingStarted: Getting Started with {ProductName}
+
+:LinkCDCUserGuide: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/debezium_user_guide/index
+:NameCDCUserGuide: {ProductName} User Guide
+
+// Debezium link attributes that are used upstream.  Add attributes as needed.
+
+:link-avro-serialization: {LinkCDCUserGuide}
+:link-cloud-events: {LinkCDCUserGuide}
+:link-db2-connector: {LinkCDCUserGuide}
+:link-debezium-logging: {LinkCDCUserGuide}
+:link-debezium-monitoring: {LinkCDCUserGuide}
+:link-deploy-mysql-connector: {LinkCDCUserGuide}
+:link-event-flattening: {LinkCDCUserGuide}
+:link-kafka-docs: https://kafka.apache.org/documentation
+:link-mongodb-connector: {LinkCDCUserGuide}
+:link-mongodb-event-flattening: {LinkCDCUserGuide}
+:link-mysql-connector: {LinkCDCUserGuide}
+:link-outbox-event-router: {LinkCDCUserGuide}
+:link-postgresql-connector: {LinkCDCUserGuide}
+:link-prefix: link
+:link-sqlserver-connector: {LinkCDCUserGuide}
+:link-topic-routing: {LinkCDCUserGuide}
+
+// Data Virtualization titles
+
+:LinkUsingDV: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/using_data_virtualization/index
+:NameUsingDV: Using Data Virtualization
+
+:LinkDVReference: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/data_virtualization_reference/index
+:NameDVReference: Data Virtualization Reference
+
+:LinkDVDevelopingClients: https://access.redhat.com/documentation/en-us/red_hat_integration/{version}/html-single/developing_clients_for_data_virtualization/index
+:NameDVDevelopingClients: Developing Clients for Data Virtualization
+
+
+
 //[id='1-how-to-assemble-a-solution-pattern']
 //= {title}
 
