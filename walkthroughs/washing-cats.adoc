@@ -4,7 +4,7 @@
 :task-context: washing-a-cat
 
 ****
-*Washing a Cat*
+*Washing a small Cat*
 ****
 
 Follow these steps to wash a cat:
