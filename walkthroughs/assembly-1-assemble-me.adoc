@@ -1,0 +1,40 @@
+// assembly attempt 
+
+// URLs
+:openshift-console-url: {openshift-host}/dashboards
+:fuse-documentation-url: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
+:amq-documentation-url: https://access.redhat.com/documentation/en-us/red_hat_amq/{amq-version}/
+
+//attributes
+:title: 1 - How to Wash a Cat (assembly version)
+:standard-fail-text: Verify that you followed all the steps. If you continue to have issues, contact your administrator.
+:bl: pass:[ +]
+
+//[id='1-how-to-assemble-a-solution-pattern']
+//= {title}
+
+[id="deploying-camel-k-tutorials"]
+= Camel K quick start developer tutorials
+//If the assembly covers a task, start the title with a verb in the gerund form, such as Creating or Configuring.
+
+{CamelKName} provides quick start developer tutorials based on integration use cases available from link:https://github.com/openshift-integration[]. This chapter provides details on how to set up and deploy the following tutorials:
+
+* xref:deploying-basic-integration[]
+* xref:deploying-camel-k-knative-integration[]
+//* xref:deploying-camel-k-virtual-db-integration[]
+* xref:deploying-camel-k-event-stream-integration[]
+* xref:deploying-camel-k-api-integration[]
+
+include::fragment.adoc[]
+
+[type=walkthroughResource,serviceName=openshift]
+.Red Hat OpenShift
+****
+* link:{openshift-console-url}[Console, window="_blank"]
+* link:https://docs.openshift.com/dedicated/4/welcome/index.html/[OpenShift Documentation, window="_blank"]
+* link:https://blog.openshift.com/[OpenShift Blog, window="_blank"]
+****
+
+:sectnums:
+
+include::p_deploying-basic-integration.adoc[leveloffset=+1]
